@@ -5,7 +5,7 @@ $classname = 'jarry';
 spl_autoload_register('autoload');
 
 function autoload($classname){
-    $path = "./classes/";
+    $path = "../classes/";
     $ext  = ".class.php";
     $filename = $path.$classname.$ext;
 
