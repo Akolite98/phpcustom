@@ -1,15 +1,15 @@
 <?php
 
-use App\Route;
+use App\Core\Route;
 use App\Core\Globals;
-use App\Controllers\ShopController;
+use App\Controllers\visitorsController;
 
-Route::get('about-us', function(){
-    Globals::view('visitors/about-us.php');
-});
+Route::get('', [visitorsController::class, 'index']);
 
-Route::get('shop', [ShopController::class, 'index']);
+Route::get('about-us', [visitorsController::class, 'about']);
 
-Route::get('cart', function(){
-    echo "cart page";
+Route::get('contact-us', [visitorsController::class, 'contact']);
+
+Route::get('auth/login', function(){
+    Globals::view('auth/login.php');
 });

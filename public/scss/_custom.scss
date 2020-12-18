@@ -1,0 +1,30 @@
+@import './variables';
+
+section.about{
+    background-image: url("../img/02.jpg");
+}
+
+
+section.contact{
+    position: relative;
+    z-index: 4;
+
+    div.row{
+        position: relative;
+        z-index: 4;
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        height: 100px;
+        width: 100%;
+        background-color: $primary;
+        position: absolute;
+        left: 0;
+        transform: skewY(5deg);
+        bottom: 200px;
+        box-shadow: 0px 10px 15px rgba(10,10,10,.6);
+        z-index: 1;
+    }
+}

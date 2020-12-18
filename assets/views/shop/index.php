@@ -1,1 +1,0 @@
-this is is the shop view

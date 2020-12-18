@@ -18,11 +18,3 @@ function autoload($classname){
     
     require_once $filename;
 }
-
-function check_And_Autoload_Core_Files($classname, $coresList){
-    if(!in_array($classname, $coresList)){
-        return false;
-    }else{
-        require_once "../classes/App/Core/".$classname.".class.php";
-    }
-}

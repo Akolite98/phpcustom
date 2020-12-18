@@ -1,6 +1,6 @@
 <?php 
 
-namespace App;
+namespace App\Core;
 
 class Route{
 
@@ -8,8 +8,13 @@ class Route{
 
     public static function get($route, $callback){
         self::$validRoutes[] = $route;
+        $request_Route_Name = "$_SERVER[QUERY_STRING]";
 
-        if($_GET['url'] == $route){
+        if(!isset($request_Route_Name)){
+            $request_Route_Name = "";
+        }
+
+        if($request_Route_Name == $route){
             echo self::handle_Callback_Function($callback);
         }
     }
@@ -23,8 +28,7 @@ class Route{
 
         }elseif(is_callable($callback)){
 
-            $callback->__invoke();
-            
+            $callback->__invoke();       
         }
     }
 }
