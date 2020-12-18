@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
-class Controller{
+use App\Core\Dbh;
+
+class Controller extends Dbh{
 
     
 }

@@ -1,4 +1,4 @@
-<?php self::extends('layouts/header.php'); ?>
+<?php self::extends('layouts/header'); ?>
 
 <header class="masthead text-center text-white">
     <div class="masthead-content">
@@ -28,4 +28,4 @@
         <div class="col-lg-6 img">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi harum at nemo quas? Veritatis commodi optio ducimus harum exercitationem, officiis esse voluptate dignissimos reprehenderit distinctio aliquid maxime molestiae deleniti velit eius officia expedita recusandae fugiat culpa quasi rem nesciunt? Magnam?</div>
     </div>
 </section>
-<?php self::extends('layouts/footer.php'); ?>
+<?php self::extends('layouts/footer'); ?>

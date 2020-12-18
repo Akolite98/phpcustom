@@ -1,4 +1,5 @@
-<?php self::extends('layouts/header.php'); ?>
+<?php self::extends('layouts/header'); ?>
+
 <header class="masthead text-center text-white">
     <div class="masthead-content">
       <div class="container">
@@ -68,4 +69,4 @@
   </section>
 
 
-  <?php self::extends('layouts/footer.php'); ?>
+  <?php self::extends('layouts/footer'); ?>

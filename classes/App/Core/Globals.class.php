@@ -6,7 +6,7 @@ use App\Core\Template;
 class Globals{
 
     public static function extends($fileName){
-        require_once '../assets/views/'.$fileName;
+        require_once '../assets/views/'.$fileName.'.template.php';
     }
 
     public static function assets($filename){
@@ -15,6 +15,6 @@ class Globals{
     }
 
     public static function view($name){
-        require_once '../assets/views/'.$name;
+        require_once '../assets/views/'.$name.'.template.php';
     }
 }

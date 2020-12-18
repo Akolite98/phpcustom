@@ -1,4 +1,4 @@
-<?php self::extends('layouts/header.php'); ?>
+<?php self::extends('layouts/header'); ?>
 
 
 <section class="container" style="margin: 100px auto;">
@@ -40,4 +40,4 @@
 
 
 
-<?php self::extends('layouts/footer.php'); ?>
+<?php self::extends('layouts/footer'); ?>

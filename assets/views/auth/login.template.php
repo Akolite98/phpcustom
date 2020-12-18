@@ -1,9 +1,9 @@
-<?php self::extends('layouts/header.php'); ?>
+<?php self::extends('layouts/header'); ?>
 
 
 <section class="container" style="margin: 150px auto;">
     <div class="login auth mx-auto" style="width: 500px;">
-        <form action="" class="form-group card shadow p-3">
+        <form action="/login" class="form-group card shadow p-3" method="post">
             <h2 class="display-5 text-center border p-2 shadow rounded d-block">Login Form</h2>
             <div class="form-group mt-2">
                 <label for="email">Email</label>
@@ -29,4 +29,4 @@
 
 
 
-<?php self::extends('layouts/footer.php'); ?>
+<?php self::extends('layouts/footer'); ?>

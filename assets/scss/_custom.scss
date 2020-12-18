@@ -24,8 +24,24 @@ section.contact{
         left: 0;
         transform: skewY(5deg);
         bottom: 200px;
-        box-shadow: 0px 10px 15px rgba(10,10,10,.6);
+        box-shadow: 0px 10px 15px rgba(211, 206, 206, 0.6);
         z-index: 1;
+    }
+}
+
+
+.error{
+    h1{
+        font-size: 20rem!important;
+        color: $primary;
+        padding: 0;
+        margin: 0;
+    }
+
+    p{
+        font-size: 2rem;
+        padding: 0;
+        margin: 0;
     }
 }
 

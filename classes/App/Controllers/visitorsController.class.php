@@ -7,15 +7,23 @@ use App\Core\Globals;
 class visitorsController extends Controller{
 
     public function index(){
-        Globals::view('visitors/index.php');
+        Globals::view('visitors/index');
     }
 
     public function about(){
-        Globals::view('visitors/about-us.php');
+        Globals::view('visitors/about-us');
     }
 
 
     public function contact(){
-        Globals::view('visitors/contact-us.php');
+        Globals::view('visitors/contact-us');
+    }
+
+    public function error_500(){
+        Globals::view('error/500');
+    }
+
+    public function error_404(){
+        Globals::view('error/404');
     }
 }
