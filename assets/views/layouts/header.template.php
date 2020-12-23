@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>One Page Wonder - Start Bootstrap Template</title>
+  <title>Victor's Store</title>
 
   <!-- Bootstrap core CSS -->
   <link href="<?php echo self::assets('vendor/bootstrap/css/bootstrap.min.css');?>" rel="stylesheet">
@@ -16,6 +16,8 @@
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <link rel="shortcut icon" href="<?php self::assets('img/logo.png'); ?>" type="image/x-icon">
 
   <!-- Custom styles for this template -->
   <link href="<?php echo self::assets('css/one-page-wonder.css');?>" rel="stylesheet">
@@ -27,7 +29,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Viceo Store</a>
+      <a class="navbar-brand" href="#">Victor's Store</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -46,12 +48,25 @@
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/register">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/auth/login">Log In</a>
-          </li>
+        <?php 
+            if(!isset($_SESSION)){
+                session_start();
+              }
+
+              if(!isset($_SESSION['user'])){
+                echo '<li class="nav-item">
+                  <a class="nav-link" href="/auth/register">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/auth/login">Log In</a>
+                </li>';
+              }else{
+                echo '<li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                  </li>';
+              }
+        ?>
+          
         </ul>
       </div>
     </div>

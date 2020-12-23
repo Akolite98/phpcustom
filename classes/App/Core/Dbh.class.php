@@ -9,7 +9,7 @@ class Dbh{
     private static $host = 'localhost';
     private static $username = "root";
     private static $password = "";
-    private static $dbname = 'juicy';
+    private static $dbname = 'viceo_store';
 
     public static function connect(){
         $dsn = "mysql:host=".self::$host.";dbname=".self::$dbname;
@@ -20,7 +20,7 @@ class Dbh{
     }
 
 
-    public static function query($query, $params = array()){
+    public static function query($query, $params = null){
         $statement = self::connect()->prepare($query);
         $statement->execute($params);
 

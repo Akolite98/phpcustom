@@ -49,7 +49,7 @@ class Route{
         if(is_array($callback)){
 
             $function_Name_From_Callback_Array = $callback[1];
-            $class = new $callback[0];
+            $class = new $callback[0]($arg = true);
             return $class->$function_Name_From_Callback_Array();
 
         }elseif(is_callable($callback)){

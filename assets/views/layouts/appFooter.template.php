@@ -1,7 +1,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-primary">
     <div class="container">
-      <p class="m-0 text-center text-white small">Copyright &copy; Victor's Store 2020</p>
+      <p class="m-0 text-center text-white small">Copyright &copy; Victor's Store 2020 - <?php echo getdate()['year']; ?></p>
     </div>
     <!-- /.container -->
   </footer>

@@ -7,12 +7,12 @@
             <h2 class="display-5 text-center border p-2 shadow rounded d-block">Login Form</h2>
             <div class="form-group mt-2">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Type In your Email">
+                <input type="email" name="email" id="email" class="form-control" placeholder="Type In your Email" value="<?php self::get('email'); ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Type In your password">
+                <input type="password" name="password" id="password" class="form-control" placeholder="Type In your password" required>
             </div>
 
             <div class="form-group text-center">
@@ -27,6 +27,7 @@
     </div>
 </section>
 
+<?php self::extends('error/message'); ?>
 
 
 <?php self::extends('layouts/footer'); ?>
